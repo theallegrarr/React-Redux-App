@@ -3,14 +3,15 @@ import ReactDOM from 'react-dom';
 import thunk from 'redux-thunk';
 import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import Form from './components/Form';
 import logo from './logo.svg';
 import './App.css';
-import * as reducers from './state/reducers';
+import * as reducers from './components/state/reducers';
 
 const monsterReducer = combineReducers({
   // the key is the real name for the slice of state
-  formValue: reducers.formReducer,
-  user: reducers.cartReducer,
+  form: reducers.formReducer,
+  user: reducers.userReducer,
 });
 
 const store = createStore(
@@ -27,7 +28,7 @@ function App() {
     <div className="App">
       <Provider store={store}>
         <header className="App-header">
-          
+          <Form />
         </header>
       </Provider>
     </div>

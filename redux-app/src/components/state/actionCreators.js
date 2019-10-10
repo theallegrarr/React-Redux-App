@@ -2,6 +2,7 @@ import axios from 'axios';
 import * as types from './actionTypes';
 
 export function changeInput(value) {
+  console.log(value);
   return {
     type: types.ON_INPUT_CHANGE,
     payload: value,

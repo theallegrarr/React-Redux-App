@@ -1,4 +1,4 @@
-export default const  user ={
+export const  user ={
   "login": "theallegrarr",
   "id": 17985620,
   "node_id": "MDQ6VXNlcjE3OTg1NjIw",

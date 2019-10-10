@@ -1,28 +1,28 @@
 import * as types from './actionTypes';
-import staticUser from './staticUser';
+import { user } from './staticUser';
 
 const initialFormState = {
-  formValue: '',
+  value: '',
 };
 export function formReducer(state = initialFormState, action) {
   switch (action.type) {
     case types.ON_INPUT_CHANGE:
       return {
         ...state,
-        form: action.payload,
+        value: action.payload,
       };
     default:
       return state;
   }
 }
 
-const intialUser = staticUser;
-export function stockReducer(state = intialUser, action) {
+const intialUser = user;
+export function userReducer(state = intialUser, action) {
   switch (action.type) {
     case types.ADD_USER:
       return {
         ...state,
-        user: action.payload,
+        userData: action.payload,
       };
     default:
       return state;
