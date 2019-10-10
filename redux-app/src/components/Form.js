@@ -14,9 +14,9 @@ function Form({ form, changeInput, getUser }) {
   return (
     <form className='form' onSubmit={onSubmit}>
       <label>User ID:
-        <input value={form.value} onChange={onValueChange} name='value' />
-      </label><br />
-      <input type='submit' />
+        <input className='box' value={form.value} onChange={onValueChange} name='value' />
+      </label>
+      <input className='submit' type='submit' />
     </form>
   );
 }

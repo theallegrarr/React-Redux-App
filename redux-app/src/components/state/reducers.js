@@ -20,6 +20,7 @@ const intialUser = { userData: user };
 export function userReducer(state = intialUser, action) {
   switch (action.type) {
     case types.ADD_USER:
+      console.log(state);
       return {
         ...state,
         userData: action.payload,

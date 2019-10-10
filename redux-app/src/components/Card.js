@@ -10,9 +10,11 @@ function Card({ user, getUser }) {
   return (
     <div className='user-card'>
       <img src={user.userData.avatar_url} alt='user-image'/>
-      <h3>{user.userData.name} || {user.userData.login}</h3>
-      <h4>{user.userData.bio}</h4>
-      <p>{user.userData.location}</p>
+      <div className='user-details'>
+        <h3>{user.userData.name} || {user.userData.login}</h3>
+        <h4>{user.userData.bio}</h4>
+        <p>{user.userData.location}</p>
+      </div>
     </div>
   );
 }
