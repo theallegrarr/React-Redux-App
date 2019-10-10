@@ -19,11 +19,11 @@ export function addUser(user) {
 export const getUser = (user) => dispatch => {
   const userApi = `https://api.github.com/users/${user}`;
   const userPromise = axios.get(userApi);
-
+  console.log(user)
   Promise.all([userPromise])
     .then(([userData]) => {
       
-      dispatch(addUser(userData)); // :)
+      dispatch(addUser(userData.data)); // :)
     });
 };
 

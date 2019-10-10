@@ -16,7 +16,7 @@ export function formReducer(state = initialFormState, action) {
   }
 }
 
-const intialUser = user;
+const intialUser = { userData: user };
 export function userReducer(state = intialUser, action) {
   switch (action.type) {
     case types.ADD_USER:
